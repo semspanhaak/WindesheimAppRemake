@@ -10,7 +10,7 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/logo/windesheim.png",
+    "icon": "./assets/images/logo/Square300x300.png",
     "splash": {
       "image": "./assets/images/logo/SplashScreen.png",
       "resizeMode": "contain",

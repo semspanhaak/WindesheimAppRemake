@@ -4,7 +4,9 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+import ResultsScreen from '../screens/ResultsScreen';
+import ScheduleScreen from '../screens/ScheduleScreen';
+import NotificationsScreen from '../screens/NotificationScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const HomeStack = createStackNavigator({
@@ -25,16 +27,44 @@ HomeStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const ResultsStack = createStackNavigator({
+  Results: ResultsScreen,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+ResultsStack.navigationOptions = {
+  tabBarLabel: 'Resultaten',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
       name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+    />
+  ),
+};
+
+const ScheduleStack= createStackNavigator({
+  Schedule: ScheduleScreen,
+});
+
+ScheduleStack.navigationOptions = {
+  tabBarLabel: 'Rooster',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+    />
+  ),
+};
+
+const NotificationsStack = createStackNavigator({
+  Notifications: NotificationsScreen,
+});
+
+NotificationsStack.navigationOptions = {
+  tabBarLabel: 'Mededelingen',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
     />
   ),
 };
@@ -55,6 +85,8 @@ SettingsStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
+  ResultsStack,
+  ScheduleStack,
+  NotificationsStack,
   SettingsStack,
 });
