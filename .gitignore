@@ -1,2 +1,9 @@
 .DS_Store
 WindesApp/package-lock.json
+WindesApp/node_modules/**/*
+WindesApp/.expo/*
+WindesApp/npm-debug.*
+WindesApp/*.jks
+WindesApp/*.p12
+WindesApp/*.key
+WindesApp/*.mobileprovision
